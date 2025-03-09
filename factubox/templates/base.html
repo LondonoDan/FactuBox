@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>FactuBox</title>
+  <!-- Aquí podrías enlazar Bootstrap u otro CSS -->
+</head>
+<body>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+      </div>
+
+  <!-- Menú de navegación aqui se ponen todas las rutas de las vistas que quiero acceder-->
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Inicio</a></li>
+      
+      <li><a href="{% url 'ventas:registrar_venta' %}">Agregar Venta</a></li>
+      <li><a href="{% url 'inventario:cuadre_caja' %}">Cuadrar Caja</a></li>
+      <li><a href="{% url 'inventario:lista_productos' %}">Inventario de Productos</a></li>
+      <li><a href="/admin/">Iniciar Sesión (Administrador)</a></li>
+      <li><a href="{% url 'ventas:reporte_ventas' %}">Verificar ventas</a></li>
+    </ul>
+  </nav>
+
+  
+</body>
+</html>
+
+
+
+
